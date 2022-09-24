@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --progress",
-    "start": "webpack serve --progress"
+    "start": "webpack serve --progress",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,7 @@
     "copy-webpack-plugin": "^11.0.0",
     "core-js": "^3.25.2",
     "cross-env": "^7.0.3",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "source-map-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.6",
@@ -28,5 +31,6 @@
   },
   "dependencies": {
     "three": "^0.144.0"
-  }
+  },
+  "homepage": "https://pmineq.github.io/Three"
 }
